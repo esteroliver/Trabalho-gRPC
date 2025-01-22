@@ -1,0 +1,6 @@
+[submodule "grpc-java"]
+	path = grpc-java
+	url = https://github.com/grpc/grpc-java
+[submodule "grpc-python"]
+	path = grpc-python
+	url = https://github.com/grpc/grpc
