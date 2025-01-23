@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package weather;
+
+// Serviço WeatherService com o método GetWeather
+service WeatherService {
+  rpc GetWeather (WeatherRequest) returns (WeatherResponse);
+}
+
+// Mensagem de requisição
+message WeatherRequest {
+  string location = 1; // Localização para buscar o clima
+}
+
+// Mensagem de resposta
+message WeatherResponse {
+  float temperature = 1; // Temperatura em graus Celsius
+  float humidity = 2;    // Umidade em porcentagem
+  float precipitation = 3; // Precipitação em milímetros
+}
