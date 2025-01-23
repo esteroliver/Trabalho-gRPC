@@ -6,7 +6,7 @@ from weather_service_pb2 import WeatherResponse
 from weather_service_pb2_grpc import WeatherServiceServicer, add_WeatherServiceServicer_to_server
 
 #serviço
-class WeatherService(WeatherServiceServicer):
+class WeatherService(weather_service_pb2_grpc.WeatherServiceServicer):
     def GetWeather(self, request, context):
         print(f"Recebida uma requisição para: {request.location}")
         response = requests.get(
@@ -14,7 +14,7 @@ class WeatherService(WeatherServiceServicer):
         )
         weather_data = response.json()
         temperature = weather_data["current"]["temperature_2m"]
-        return temperature
+        return weather_service_pb2.WeatherReply(message=f"A temperatura atual é {temperature}°C.")
 
 #servidor
 async def server() -> None:
