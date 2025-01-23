@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15weather_service.proto\x12\x07weather\"\"\n\x0eWeatherRequest\x12\x10\n\x08location\x18\x01 \x01(\t\"O\n\x0fWeatherResponse\x12\x13\n\x0btemperature\x18\x01 \x01(\x02\x12\x10\n\x08humidity\x18\x02 \x01(\x02\x12\x15\n\rprecipitation\x18\x03 \x01(\x02\x32Q\n\x0eWeatherService\x12?\n\nGetWeather\x12\x17.weather.WeatherRequest\x1a\x18.weather.WeatherResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15weather_service.proto\x12\x07weather\"5\n\x0eWeatherRequest\x12\x10\n\x08latitude\x18\x01 \x01(\x02\x12\x11\n\tlongitude\x18\x02 \x01(\x02\"\"\n\x0fWeatherResponse\x12\x0f\n\x07message\x18\x01 \x01(\t2Q\n\x0eWeatherService\x12?\n\nGetWeather\x12\x17.weather.WeatherRequest\x1a\x18.weather.WeatherResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -32,9 +32,9 @@ _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'weather_service_pb2', _glob
 if not _descriptor._USE_C_DESCRIPTORS:
   DESCRIPTOR._loaded_options = None
   _globals['_WEATHERREQUEST']._serialized_start=34
-  _globals['_WEATHERREQUEST']._serialized_end=68
-  _globals['_WEATHERRESPONSE']._serialized_start=70
-  _globals['_WEATHERRESPONSE']._serialized_end=149
-  _globals['_WEATHERSERVICE']._serialized_start=151
-  _globals['_WEATHERSERVICE']._serialized_end=232
+  _globals['_WEATHERREQUEST']._serialized_end=87
+  _globals['_WEATHERRESPONSE']._serialized_start=89
+  _globals['_WEATHERRESPONSE']._serialized_end=123
+  _globals['_WEATHERSERVICE']._serialized_start=125
+  _globals['_WEATHERSERVICE']._serialized_end=206
 # @@protoc_insertion_point(module_scope)
