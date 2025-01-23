@@ -1,9 +1,8 @@
 import grpc
 import asyncio
 import requests
-from concurrent import futures
-from weather_service_pb2 import WeatherResponse
-from weather_service_pb2_grpc import WeatherServiceServicer, add_WeatherServiceServicer_to_server
+import weather_service_pb2
+import weather_service_pb2_grpc
 
 #serviço
 class WeatherService(weather_service_pb2_grpc.WeatherServiceServicer):
