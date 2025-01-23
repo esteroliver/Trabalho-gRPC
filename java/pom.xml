@@ -1,0 +1,43 @@
+<dependencies>
+    <!-- gRPC -->
+    <dependency>
+        <groupId>io.grpc</groupId>
+        <artifactId>grpc-netty</artifactId>
+        <version>1.57.0</version>
+    </dependency>
+    <dependency>
+        <groupId>io.grpc</groupId>
+        <artifactId>grpc-stub</artifactId>
+        <version>1.57.0</version>
+    </dependency>
+    <dependency>
+        <groupId>io.grpc</groupId>
+        <artifactId>grpc-protobuf</artifactId>
+        <version>1.57.0</version>
+    </dependency>
+
+    <!-- Protocol Buffers -->
+    <dependency>
+        <groupId>com.google.protobuf</groupId>
+        <artifactId>protobuf-java</artifactId>
+        <version>3.25.0</version>
+    </dependency>
+</dependencies>
+
+<build>
+    <plugins>
+        <!-- Plugin do gRPC para gerar código Java a partir do proto -->
+        <plugin>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-java-maven-plugin</artifactId>
+            <version>1.57.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
